@@ -1,46 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
-  <script src="js/index.js"></script>
-  <title>Iframe1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محرر الأكواد الذكي المطور</title>
+    <!-- ربط ملف التصميم الخارجي -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="heder1">
- <div>
-  
-<div class="watch-server">
-  <div class="container">
-            <h2>سيرفرات المشاهدة</h2>
-            <button class="watch-server-button active tablinks" onclick="openCity(event, 'server01')">1السيرفر</button>
-            <button class="watch-server-button" onclick="openCity(event, 'server02')">السيرف1</button>
-            <button class="watch-server-button" onclick="openCity(event, 'server03')">السيرفر2</button>
-            <button class="watch-server-button" onclick="openCity(event, 'server04')">السيرفر3</button>
-            <button class="watch-server-button" onclick="openCity(event, 'server05')">السيرفر4</button>
-            <button class="watch-server-button" onclick="openCity(event, 'server05')">السيرفر4</button>
-            <button class="watch-server-button" onclick="openCity(event, 'server05')">السيرفر4</button>
-            <button class="watch-server-button" onclick="openCity(event, 'server05')">السيرفر4</button>
-        </div>
-        <div class="watch-server-content">
-            <div id="server01" class="tabcontent" style="display: block;">
-                <iframe width="100%" height="460" src="" scrolling="OFF" frameborder="0" allowfullscreen=""></iframe>
-            </div>
-            <div id="server02" class="tabcontent" style="display: none;">
-                <iframe width="100%" height="460" src="" scrolling="OFF" frameborder="0" allowfullscreen=""></iframe>
-            </div>
-            <div id="server03" class="tabcontent" style="display: none;">
-                <iframe width="100%" height="460" src="" scrolling="OFF" frameborder="0" allowfullscreen=""></iframe>
-            </div>
-            <div id="server04" class="tabcontent" style="display: none;">
-                <iframe width="100%" height="460" src="" scrolling="OFF" frameborder="0" allowfullscreen=""></iframe>
-            </div>
-            <div id="server05" class="tabcontent" style="display: none;">
-                <iframe width="100%" height="460" src="" scrolling="OFF" frameborder="0" allowfullscreen=""></iframe>
-        </div>
-      </div>
+
+    <!-- شريط التحكم العلوي المطور -->
+    <div class="top-bar">
+        <button id="picker-btn" class="picker-btn" title="اضغط هنا ثم اختر أي عنصر من المعاينة لتعديله">↗</button>
+        <input type="text" id="ai-prompt" class="prompt-input" placeholder="اختر عنصراً أولاً بالسهم، أو اكتب مباشرة هنا ما ترغب في تعديله...">
+        <button id="generate-btn" class="generate-btn">تعديل بالذكاء الاصطناعي ✨</button>
     </div>
-  </div>
+
+    <div class="container">
+        <!-- اليمين: ساحة الكود والتعديل -->
+        <div class="editor-side">
+            <h2>محرر الأكواد (الكود المكتوب بالكامل)</h2>
+            <textarea id="code-input" placeholder="ضع كود اللعبة أو الصفحة بالكامل هنا لكي يبدأ الذكاء الاصطناعي بفهمه وتعديل الأجزاء المحددة..."></textarea>
+        </div>
+
+        <!-- اليسار: شاشة المعاينة الحية -->
+        <div class="preview-side">
+            <h2>المعاينة المباشرة (شاشة العرض)</h2>
+            <iframe id="preview-output"></iframe>
+        </div>
+    </div>
+
+    <!-- ربط ملف الجافا سكريبت الخارجي -->
+    <script src="script.js"></script>
 </body>
 </html>
